@@ -1,12 +1,12 @@
 #include "lists.h"
 
 /**
- * _cycle - checks list containing cycle
+ * check_cycle - checks list containing cycle
  * @l: singly linked list
  *
  * Return: 0 or 1
  */
-int _cycle(listint_t *l)
+int check_cycle(listint_t *l)
 {
 	listint_t *j, *k;
 
