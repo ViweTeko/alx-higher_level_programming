@@ -3,4 +3,4 @@ one = "Holberton"
 two = "School"
 
 one += " " + two
-print("Welcome to {}!".format(one))
+print(f"Welcome to {one}!")
