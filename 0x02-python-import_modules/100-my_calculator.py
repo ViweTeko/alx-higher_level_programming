@@ -1,22 +1,17 @@
 #!/usr/bin/python3
-if __name__ = "__main__":
-    import sys
+if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
-    if len(sys.argv) != 4:
-	print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-	exit(1)
-    x = int(sys.argv[1])
-    y = int(sys.argv[3])
-    op = sys.argv[2]
+    import sys
 
-    if op == "+":
-	print("{} + {} = {}".format(x, y, add(x, y)))
-    elif op == "-":
-        print("{} + {} = {}".format(x, y, sub(x, y)))
-    elif op == "*":
-        print("{} + {} = {}".format(x, y, mul(x, y)))
-    elif op == "/":
-        print("{} + {} = {}".format(x, y, div(x, y)))
-    else:
-	print("Unknown operator. Available operators: +, -, * and /")
-	exit(1)
+    if len(sys.argv) - 1 != 3:
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        sys.exit(1)
+
+    opp = {"+": add, "-": sub, "*": mul, "/": div}
+    if sys.argv[2] not in list(opp.keys()):
+        print("Unknown operator. Available operators: +, -, * and /")
+        sys.exit(1)
+
+    a = int(sys.argv[1])
+    b = int(sys.argv[3])
+    print("{} {} {} = {}".format(a, sys.argv[2], b, opp[sys.argv[2]](a, b)))
