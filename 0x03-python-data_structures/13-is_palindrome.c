@@ -33,36 +33,39 @@ listint_t *rev(listint_t **h)
  */
 int _pali(listint_t **h)
 {
-	listint_t *a, *b, *c;
-	size_t d = 0, e;
+	listint_t *a = *h, *b = *h, *c = *h, *d = NULL;
 
 	if (*h == NULL || (*h)->next == NULL)
 		return (1);
 
-	a = *h;
-	while (a)
+	while (1)
 	{
-		d++;
+		b = b->next->next;
+		if (!b)
+		{
+			d = a->next;
+			break;
+		}
+		if (!b->next)
+		{
+			d = a->next->next;
+			break;
+		}
 		a = a->next;
 	}
-	a = *h;
-	for (e = 0; e < (d / 2) - 1; e++)
-		a = a->next;
-	if ((d % 2) == 0 && a->n != a->next->n)
-		return (0);
-	a = a->next->next;
-	b = rev(&a);
-	c = b;
+	rev(&d);
 
-	a = *h;
-	while (b)
+	while (d && c)
 	{
-		if (a->n != b->n)
+		if (c->n == d->n)
+		{
+			d = d->next;
+			c = c->next;
+	}
+		else
 			return (0);
-		a = a->next;
-		b = b->next;
-	}
-	rev(&c);
+	if (!d)
+		return (0);
 
-	return (1);
+	return (0);
 }
