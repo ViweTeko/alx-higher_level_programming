@@ -142,4 +142,3 @@ class Rectangle:
         else:
             return rect_1 if rect_1.area() >= rect_2.area()\
                     else rect_2
-

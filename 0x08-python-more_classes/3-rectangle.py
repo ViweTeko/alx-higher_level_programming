@@ -100,4 +100,3 @@ class Rectangle:
         display = '\n'.join(["#" * self.__width for i in range(self.__height)])
 
         return display
-
