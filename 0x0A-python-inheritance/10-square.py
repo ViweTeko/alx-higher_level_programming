@@ -4,6 +4,7 @@
 
 Rectangle = __import__('9-rectangle.py').Rectangle
 
+
 class Square(Rectangle):
     """ This class inherits from Rectangle class
     Attributes:

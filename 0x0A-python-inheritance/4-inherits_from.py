@@ -2,6 +2,7 @@
 
 """ This module checks for inheritance """
 
+
 def inherits_from(obj, a_class):
     """ Checks for inheritance of an object
     Args:

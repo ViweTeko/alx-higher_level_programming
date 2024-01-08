@@ -2,6 +2,7 @@
 
 """ This continues from the previous file """
 
+
 class BaseGeometry:
     """ This class creates a base geometry class.
     Attributes:

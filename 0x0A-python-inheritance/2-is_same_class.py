@@ -2,6 +2,7 @@
 
 """ Checks if its the same class """
 
+
 def is_same_class(obj, a_class):
     """ Checks if object is the instance of given class
     Args:
@@ -10,6 +11,6 @@ def is_same_class(obj, a_class):
     Returns:
         True or False
     """
-    if type(obj) == a_class:
+    if type(obj) is a_class:
         return True
     return False

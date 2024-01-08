@@ -5,6 +5,7 @@ This module contains a class that inherits from class int
 and inverts its equality and non equality operation
 """
 
+
 class MyInt(int):
     """This derived class of the base class int
 

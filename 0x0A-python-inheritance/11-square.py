@@ -26,5 +26,5 @@ class Square(Rectangle):
         """ Returns the string format of object to overwrite base class
         of str
         """
-        return "[{}] {}/{}".format(self.__class__.__name__,
-                self.__size, self.__size)
+        return "[{}] {}/{}".format(
+                self.__class__.__name__, self.__size, self.__size)

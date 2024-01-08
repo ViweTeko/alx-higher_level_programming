@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 
+
 """
 This module contains a class that inherits another class
 along with a class list.
 """
+
 
 class MyList(list):
     """This class inherits default list class

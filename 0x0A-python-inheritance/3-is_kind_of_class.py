@@ -3,6 +3,8 @@
 """ This module checks if object passed is instance
 of class inherited from specified class.
 """
+
+
 def is_kind_of_class(obj, a_class):
     """ Checks if object is instance of class
     inherited from that class
