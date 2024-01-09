@@ -3,6 +3,7 @@
 """ This module returns the JSON representation of object """
 import json
 
+
 def to_json_string(my_obj):
     """ Returns JSON representative of object
     Args:

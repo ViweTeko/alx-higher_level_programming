@@ -12,8 +12,6 @@ class Student:
         to_json(self)
     """
 
-
-
     def __init__(self, first_name, last_name, age):
         """Initializer"""
         self.first_name = first_name
