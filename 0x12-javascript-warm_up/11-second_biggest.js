@@ -3,9 +3,11 @@
  * This script searches the second
  * biggest integer in list of args
  */
-if (process.argv.length <= 3) {
+const arglen = process.argv.length;
+if (arglen <= 3) {
   console.log('0');
 } else {
-  let argv = process.argv.slice(2);
-  console.log(argv.sort()[argv.length - 2]);
+  const arr = process.argv.slice(2, arglen);
+  arr.sort((a, b) => b - a);
+  console.log(arr[1]);
 }

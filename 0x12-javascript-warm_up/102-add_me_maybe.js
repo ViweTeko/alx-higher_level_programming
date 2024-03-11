@@ -4,6 +4,6 @@
  * calls a function
  */
 exports.addMeMaybe = function (number, theFunction) {
-  ++nummber;
+  ++number;
   theFunction(number);
 };
