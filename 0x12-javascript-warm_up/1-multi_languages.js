@@ -5,12 +5,12 @@
  */
 let a = 0;
 const line = [
-	'C is fun',
-	'Python is cool',
-	'JavaScript is amazing'
+  'C is fun',
+  'Python is cool',
+  'JavaScript is amazing'
 ];
 
 while (a < line.length) {
-	console.log(line[a]);
-	a++;
+  console.log(line[a]);
+  a++;
 }
