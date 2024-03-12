@@ -6,5 +6,5 @@ exports.esrever = (list) => {
   for (let a = len - 1; a > 0; a--) {
     newList.push(list[a]);
   }
-	return newList;
+  return newList;
 };
