@@ -19,8 +19,9 @@ def obj_state(username, password, database, state_name):
     engine = create_engine(
             "mysql+mysqldb://{}:{}@localhost/{}".format(
                 username, password, database),
-            pool_pre_ping+True)
-    session_maker = sessionmaker() as session:
+            pool_pre_ping=True)
+    session_maker = sessionmaker(bind=engine)
+    with session_maker() as session:
         states = session.query(State).filter_by(
                 name=state_name).order_by(State.id).all()
         if states:
