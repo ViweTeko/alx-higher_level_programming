@@ -33,5 +33,5 @@ def obj_state(username, password, database, state_name):
     if __name__ == "__main__":
         if len(argv) != 5:
             print("Usage: <script> <username> <password> <database> <state name>")
-            exit(1)
+            sys.exit(1)
         obj_state(argv[1], argv[2], argv[3], argv[4])

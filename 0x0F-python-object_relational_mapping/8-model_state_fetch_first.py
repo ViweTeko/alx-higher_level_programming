@@ -3,7 +3,7 @@
 import sys
 from sys import argv
 from sqlalchemy import create_engine
-from sqlqlchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker
 from model_state import State
 
 
