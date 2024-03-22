@@ -11,6 +11,7 @@ def state_all(username, password, database):
         username: user name
         password: password
         database: name of database
+
     """
 
     db = MySQLdb.connect(

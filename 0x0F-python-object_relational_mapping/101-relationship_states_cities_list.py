@@ -11,6 +11,7 @@ from relationship_state import State
 
 def states_n_cities(username, password, database):
     """Lists all cities and states contained in database
+
     Args:
         username: username
         password: password
