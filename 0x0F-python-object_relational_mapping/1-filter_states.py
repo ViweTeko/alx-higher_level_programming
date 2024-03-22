@@ -4,13 +4,13 @@ import MySQLdb
 from sys import argv
 
 
-def state_all(username, password, database):
-    """ Lists all states starting with N"""
+if __name__ == "__main__":
+    """ Lists all names starting with N"""
     db = MySQLdb.connect(
             host="localhost",
-            user=username,
-            password=password,
-            db=database
+            user=argv[1],
+            password=argv[2],
+            db=argv[3],
             port=3306
     )
     cursor = db.cursor()
@@ -24,9 +24,3 @@ def state_all(username, password, database):
     cursor.close()
     db.close()
 
-
-if __name__ == "__main__":
-    if len(argv) != 4:
-        print("Usage: <script> <username> <password> <database>")
-        exit(1)
-    state_all(argv[1], argv[2], argv[3])

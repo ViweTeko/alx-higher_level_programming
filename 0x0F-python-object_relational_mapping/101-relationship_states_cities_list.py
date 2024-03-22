@@ -21,7 +21,7 @@ def states_n_cities(username, password, database):
             "mysql+mysqldb://{}:{}@localhost/{}".format(
                 username, password, database),
             pool_pre_ping=True)
-    sessio_maker = sessionmaker(bind=engine)
+    session_maker = sessionmaker(bind=engine)
     with session_maker() as session:
         states = session.query(State).order_by(State.id).all()
         for state in states:
