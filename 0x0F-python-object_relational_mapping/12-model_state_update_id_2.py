@@ -8,7 +8,7 @@ from sqlalchemy.orm import State
 
 def update_state(username, password, database):
     """ Changes State object
-    
+ 
     Args:
         username: username
         password: password
@@ -26,8 +26,8 @@ def update_state(username, password, database):
             session.commit()
 
 
-    if __name__ == "__main__":
-        if len(argv) != 4:
-            print("Usage: <script> <username> <password> <database> <state name>")
-            exit(1)
-        update_state(argv[1], argv[2], argv[3])
+if __name__ == "__main__":
+    if len(argv) != 4:
+        print("Usage: <script> <username> <password> <database> <state name>")
+        exit(1)
+    update_state(argv[1], argv[2], argv[3])
