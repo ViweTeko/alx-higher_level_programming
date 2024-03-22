@@ -8,7 +8,7 @@ from model_state import State
 
 
 def obj_state(username, password, database, state_name):
-    """Displays state object
+    """ Displays state object
     Args:
         username: username
         password: user password
@@ -27,6 +27,7 @@ def obj_state(username, password, database, state_name):
                 print(state.id)
             else:
                 print("Not found")
+
 
     if __name__ == "__main__":
         if len(argv) != 5:

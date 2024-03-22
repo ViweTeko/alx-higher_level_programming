@@ -25,8 +25,9 @@ def add_state(username, password, database):
         session.commit()
         print(state.id)
 
+
 if __name__ == "__main__":
     if len(argv) != 4:
         print("Usage: <script> <username> <password> <database> <state name>")
         exit(1)
-        add_state(argv[1], argv[2], argv[3])
+    add_state(argv[1], argv[2], argv[3])

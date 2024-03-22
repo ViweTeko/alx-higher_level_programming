@@ -22,14 +22,15 @@ def state_all(username, password, database):
     )
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
-
+    states = cursor.fetchall()
     for state in states:
         print(state)
     cursor.close()
     db.close()
 
+
 if __name__ == "__main__":
     if len(argv) != 4:
         print("Usage: <script> <username> <password> <database>")
         exit(1)
-        state_all(argv[1], argv[2], argv[3])
+    state_all(argv[1], argv[2], argv[3])

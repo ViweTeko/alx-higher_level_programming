@@ -4,6 +4,7 @@ import sys
 from sys import argv
 import MySQLdb
 
+
 def state_some(username, password, database, state_name):
     """ Lists states starting with N
 
@@ -36,4 +37,4 @@ if __name__ == "__main__":
     if len(argv) != 5:
         print("Usage: <script> <username> <password> <database> <state name>")
         exit(1)
-        state_some(argv[1], argv[2], argv[3], argv[4])
+    state_some(argv[1], argv[2], argv[3], argv[4])

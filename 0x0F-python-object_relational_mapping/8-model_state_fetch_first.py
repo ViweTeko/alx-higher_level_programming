@@ -27,8 +27,9 @@ def first_state(username, password, database):
         else:
             print("Nothing")
 
+
 if __name__ == "__main__":
     if len(argv) != 4:
         print("Usage: <script> <username> <password> <database>")
         exit(1)
-        first_state(argv[1], argv[2], argv[3])
+    first_state(argv[1], argv[2], argv[3])

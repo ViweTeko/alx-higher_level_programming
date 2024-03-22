@@ -25,6 +25,7 @@ def all_cities(username, password, database):
         for city in cities:
             print("{}: ({}} {}".format(city.state.name, city.id, city.name))
 
+
 if __name == "__main__":
     if len(argv) != 4:
         print("Usage: <script> <username> <password> <database> <state name>")

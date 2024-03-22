@@ -24,8 +24,9 @@ def list_states(username, password, database):
         for state in session.query(State).order_by(State.id):
             print("{}: {}".format(state.id, state.name))
 
+
 if __name__ == "__main__":
     if len(argv) != 4:
         print("Usage: <script> <username> <password> <database>")
         exit(1)
-        list_states(argv[1], argv[2], argv[3])
+    list_states(argv[1], argv[2], argv[3])

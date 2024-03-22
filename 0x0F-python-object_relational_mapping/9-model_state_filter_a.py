@@ -6,6 +6,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import State
 
+
 def state_a(username, password, database):
     """Displays all states containing 'a'
     Args:
@@ -25,6 +26,7 @@ def state_a(username, password, database):
                 State.name.like("%a%")).order_by(State.id).all()
         for state in states:
             print("{}: {}".format(state.id, state.name))
+
 
 if __name__ == "__main__":
     if len(argv) != 4:

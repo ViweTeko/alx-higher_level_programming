@@ -31,8 +31,9 @@ def list_cities(username, password, database):
     cursor.close()
     db.close()
 
+
 if __name__ == "__main__":
     if len(argv) != 4:
         print("Usage: <script> <username> <password> <database>")
         exit(1)
-        list_cities(argv[1], argv[2], argv[3])
+    list_cities(argv[1], argv[2], argv[3])

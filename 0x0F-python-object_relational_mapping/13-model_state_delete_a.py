@@ -26,6 +26,7 @@ def del_state(username, password, database):
             session.delete(state)
         session.commit()
 
+
 if __name__ == "__main__":
     if len(argv) != 4:
         print("Usage: <script> <username> <password> <database> <state name>")

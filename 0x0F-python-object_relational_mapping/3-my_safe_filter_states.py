@@ -28,6 +28,7 @@ def state_some(username, password, database, state_name):
     cursor.close()
     db.close()
 
+
 if __name__ == "__main__":
     if len(argv) != 5:
         print("Usage: <script> <username> <password> <database> <state name>")

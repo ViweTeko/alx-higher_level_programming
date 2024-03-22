@@ -32,6 +32,7 @@ def create_state(username, password, database):
         session.add(city)
         session.commit()
 
+
 if __name__ == "__main__":
     if len(argv) != 4:
         print("Usage: <script> <username> <password> <database> <state name>")

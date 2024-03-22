@@ -3,6 +3,7 @@
 import MySQLdb
 from sys import argv
 
+
 def state_all(username, password, database):
     """Lists all states starting with N
 
@@ -28,6 +29,7 @@ def state_all(username, password, database):
         print(state)
     cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     if len(argv) != 4:
