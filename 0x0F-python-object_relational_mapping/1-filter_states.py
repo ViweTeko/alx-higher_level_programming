@@ -5,15 +5,7 @@ from sys import argv
 
 
 def state_all(username, password, database):
-    """ Lists all states starting with N
-
-    Args:
-        username: user name
-        password: password
-        database: name of database
-
-    """
-
+    """ Lists all states starting with N"""
     db = MySQLdb.connect(
             host="localhost",
             user=username,
