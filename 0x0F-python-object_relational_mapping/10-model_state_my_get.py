@@ -17,7 +17,7 @@ def obj_state(username, password, database, state_name):
         state_name: name of state
     """
     engine = create_engine(
-            "mysql+mysqldb:??{}:{}@localhost/{}".format(
+            "mysql+mysqldb://{}:{}@localhost/{}".format(
                 username, password, database),
             pool_pre_ping+True)
     session_maker = sessionmaker() as session:

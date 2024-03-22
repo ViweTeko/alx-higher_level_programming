@@ -16,8 +16,8 @@ def first_state(username, password, database):
         database: database name
     """
 
-    engine =create_engine(
-            "mysql+mysqldb://{}:{}@localhost/()".format(
+    engine = create_engine(
+            "mysql+mysqldb://{}:{}@localhost/{}".format(
                 username, password, database),
             pool_pre_ping=True)
     session_maker = sessionmaker(bind=engine)
