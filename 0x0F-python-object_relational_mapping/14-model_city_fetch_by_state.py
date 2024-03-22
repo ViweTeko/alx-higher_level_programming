@@ -24,7 +24,7 @@ def all_cities(username, password, database):
     with session_maker() as session:
         cities = session.query(City).join(State).order_by(City.id).all()
         for city in cities:
-            print("{}: ({}}) {}".format(city.state.name, city.id, city.name))
+            print("{}: ({}) {}".format(city.state.name, city.id, city.name))
 
 
 if __name == "__main__":
