@@ -12,7 +12,7 @@ def list_some(username, password, database, state_name):
         username: username
         password: user password
         database: database name
-        stae_naame: name of state
+        state_name: name of state
     """
     db = MySQL.connect(
             host="localhost",
@@ -24,10 +24,9 @@ def list_some(username, password, database, state_name):
     cursor = db.cursor()
     cursor.execute(
             """SELECT cities.name FROM cities
-            JOIN states ON cities.state_id = states.id
-            WHERE states.name = %s
-            ORDER BY cities.id ASC""",
-            (state_name,)
+            INNER JOIN states ON cities.state_id = states.id
+            WHERE states.name = LIKE BINARY '%{}%'
+            ORDER BY cities.id ASC""".format(state_name)
     )
     cities = [city[0] for city in cursor.fetchall()]
     print(", ".join(cities))

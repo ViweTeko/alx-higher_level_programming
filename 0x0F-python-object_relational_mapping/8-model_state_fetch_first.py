@@ -8,12 +8,14 @@ from model_state import State
 
 
 def first_state(username, password, database):
-    """Displays first State from database
+    """ Displays first State from database
+
     Args:
         username: user name
         password: user password
         database: database name
     """
+
     engine =create_engine(
             "mysql+mysqldb://{}:{}@localhost/()".format(
                 username, password, database),

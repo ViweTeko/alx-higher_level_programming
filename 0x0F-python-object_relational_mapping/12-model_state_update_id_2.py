@@ -8,6 +8,7 @@ from sqlalchemy.orm import State
 
 def update_state(username, password, database):
     """ Changes State object
+    
     Args:
         username: username
         password: password

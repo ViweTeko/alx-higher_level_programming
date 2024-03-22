@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """This script lists all States, with City objects in database"""
 import sys
 from sqlalchemy import create_engine

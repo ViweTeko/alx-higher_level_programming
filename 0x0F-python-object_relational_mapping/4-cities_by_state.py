@@ -5,10 +5,10 @@ from sys import argv
 
 
 def list_cities(username, password, database):
-    """Displays all cities in database
+    """ Displays all cities in database
 
     Args:
-        usernmae: Username
+        username: Username
         password: user password
         database: database name
     """
