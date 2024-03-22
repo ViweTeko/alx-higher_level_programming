@@ -9,7 +9,7 @@ from model_state import State
 
 def obj_state(username, password, database, state_name):
     """ Displays state object
-    
+ 
     Args:
         username: username
         password: user password
@@ -31,8 +31,8 @@ def obj_state(username, password, database, state_name):
                 print("Not found")
 
 
-    if __name__ == "__main__":
-        if len(argv) != 5:
-            print("Usage: <script> <username> <password> <database> <state name>")
-            sys.exit(1)
-        obj_state(argv[1], argv[2], argv[3], argv[4])
+if __name__ == "__main__":
+    if len(argv) != 5:
+        print("Usage: <script> <username> <password> <database> <state name>")
+        sys.exit(1)
+    obj_state(argv[1], argv[2], argv[3], argv[4])
