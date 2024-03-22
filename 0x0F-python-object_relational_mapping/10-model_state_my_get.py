@@ -9,7 +9,7 @@ from model_state import State
 
 def obj_state(username, password, database, state_name):
     """ Displays state object
- 
+
     Args:
         username: username
         password: user password

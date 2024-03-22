@@ -9,7 +9,7 @@ from model_state import State
 
 def del_state(username, password, database):
     """Deletes all State objects containing letter 'a'
- 
+
     Args:
         username: username
         password: password

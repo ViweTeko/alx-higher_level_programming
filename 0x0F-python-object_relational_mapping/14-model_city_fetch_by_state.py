@@ -10,7 +10,7 @@ from model_city import City
 
 def all_cities(username, password, database):
     """Prints all city objects from database
-    
+
     Args:
         username: username
         password: password
