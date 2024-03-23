@@ -24,7 +24,7 @@ def list_some(username, password, database, state_name):
     cursor = db.cursor()
     cursor.execute(
             """SELECT cities.name FROM cities
-            INNER JOIN states ON cities.state_id = states.id
+            JOIN states ON cities.state_id = states.id
             WHERE states.name = LIKE BINARY '%{}%'
             ORDER BY cities.id ASC""".format(state_name)
     )
