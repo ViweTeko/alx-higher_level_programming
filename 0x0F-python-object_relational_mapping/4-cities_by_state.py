@@ -12,7 +12,7 @@ def list_cities(username, password, database):
         password: user password
         database: database name
     """
-    db = MySQL.connect(
+    db = MySQLdb.connect(
             host="localhost",
             user=username,
             password=password,

@@ -14,7 +14,7 @@ def list_some(username, password, database, state_name):
         database: database name
         state_name: name of state
     """
-    db = MySQL.connect(
+    db = MySQLdb.connect(
             host="localhost",
             user=username,
             password=password,
