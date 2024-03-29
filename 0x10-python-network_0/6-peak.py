@@ -15,8 +15,8 @@ def find_peak(int_list):
     if high == 2:
         return max(int_list)
     if int_list[mid] >= int_list[mid - 1] and\
-        int_list[mid] >= int_list[mid + 1]:
-            return int_list[mid]
+                int_list[mid] >= int_list[mid + 1]:
+        return int_list[mid]
     if mid > 0 and int_list[mid] < int_list[mid + 1]:
         return find_peak(int_list[mid:])
     if mid > 0 and int_list[mid] < int_list[mid - 1]:
