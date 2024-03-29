@@ -8,8 +8,8 @@ def find_peak(int_list):
         return None
     low = 0
     high = len(int_list)
-    mid = int(((high - low) // 2) + low)
-
+    mid = ((high - low) // 2) + low
+    mid = int(mid)
     if high == 1:
         return int_list[0]
     if high == 2:
