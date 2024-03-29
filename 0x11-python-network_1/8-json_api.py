@@ -7,7 +7,7 @@ import requests
 if __name__ == "__main__":
     letter = "" if len(argv) == 1 else argv[1]
     payload = {"q": letter}
-    a = requests.post("https://0.0.0.0:5000/search_user", data=payload)
+    a = requests.post("http://0.0.0.0:5000/search_user", data=payload)
     try:
         it = a.json()
         if it == {}:
