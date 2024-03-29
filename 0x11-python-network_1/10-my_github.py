@@ -3,14 +3,12 @@
 if __name__ == "__main__":
     from sys import argv
     import requests
+    from requests.auth import HTTPBasicAuth
 
     url = "https://api.github.com/user"
 
     user = argv[1]
     password = argv[2]
-    data_result = requests.get(url, auth=(user, password))
-    try:
-        json_data = data_result.join()
-        print(json_data;"id"])
-    except Exception:
-        print("None")
+    auth = HTTPBasicAuth(user, password)
+    data_result = requests.get(url, auth=auth)
+    print(data_result.json().get("id"))
